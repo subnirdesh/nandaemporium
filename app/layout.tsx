@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter,Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+const cormorant = Cormorant_Garamond({ 
+  subsets: ['latin'], 
+  weight: ['400', '600', '700'],
+  style: ['normal', 'italic']
+})
 
 
 export const metadata: Metadata = {
