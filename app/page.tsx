@@ -315,7 +315,7 @@ export default function Home() {
           }}>
             Get Directions
           </Link>
-          <a href="https://wa.me/977YOURNUMBER" style={{
+          <a href="https://wa.me/9779856027044" style={{
             fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.2em',
             textTransform: 'uppercase', color: '#8B4513', border: '1px solid #8B4513',
             padding: '16px 36px', textDecoration: 'none',
