@@ -33,11 +33,11 @@ export default function Contact() {
   }
 
   return (
-    <main style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", background: '#fdf6ee' }}>
+    <main style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", background: '#fbf5ec' }}>
 
       {/* ── HERO HEADER ── */}
       <section style={{
-        background: '#1a0d04',
+        background: 'radial-gradient(1100px 540px at 50% 30%, rgba(212,168,85,0.18), transparent 60%), linear-gradient(180deg, #160b04, #0f0703)',
         padding: '100px 40px 80px',
         textAlign: 'center',
         position: 'relative',
@@ -65,7 +65,7 @@ export default function Contact() {
             fontSize: '10px', letterSpacing: '0.4em',
             textTransform: 'uppercase', color: '#D4A855', marginBottom: '24px',
           }}>
-            हामीलाई भेट्नुहोस् · Find Us
+            Find us
           </p>
           <h1 style={{
             fontSize: 'clamp(48px, 8vw, 88px)',
@@ -96,15 +96,13 @@ export default function Contact() {
       <div style={{ height: '3px', background: 'linear-gradient(90deg, #8B4513, #D4A855, #8B4513)' }} />
 
       {/* ── MAIN CONTENT ── */}
-      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 40px', display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '80px', alignItems: 'start' }}>
+      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 40px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '56px', alignItems: 'start' }}>
 
         {/* LEFT — Info */}
         <div>
           {/* Visit Us */}
           <div style={{ marginBottom: '56px' }}>
-            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', marginBottom: '20px' }}>
-              हाम्रो पसल
-            </p>
+            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', marginBottom: '20px' }}>Visit</p>
             <h2 style={{ fontSize: '36px', fontWeight: 700, color: '#1a0d04', margin: '0 0 28px', lineHeight: 1.1 }}>
               Visit Our Store
             </h2>
@@ -113,28 +111,24 @@ export default function Contact() {
             {[
               {
                 label: 'Location',
-                np: 'ठेगाना',
                 value: 'Pokhara, Gandaki Province, Nepal',
                 sub: 'Find us in the heart of Pokhara',
                 icon: '◈',
               },
               {
                 label: 'Phone & WhatsApp',
-                np: 'फोन',
                 value: '+977 9856027044',
                 sub: 'Call or WhatsApp anytime',
                 icon: '◈',
               },
               {
                 label: 'Store Hours',
-                np: 'समय',
                 value: 'Sun – Fri: 9:00 AM – 7:00 PM',
                 sub: 'Saturday: 10:00 AM – 5:00 PM',
                 icon: '◈',
               },
               {
                 label: 'Instagram',
-                np: 'इन्स्टाग्राम',
                 value: '@nanda_emporium',
                 sub: 'Follow us for new arrivals',
                 icon: '◈',
@@ -153,7 +147,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#8B4513', margin: '0 0 4px' }}>
-                    {item.label} · {item.np}
+                    {item.label}
                   </p>
                   <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '18px', fontWeight: 700, color: '#1a0d04', margin: '0 0 2px' }}>
                     {item.value}
@@ -203,10 +197,11 @@ export default function Contact() {
         {/* RIGHT — Form */}
         <div>
           <div style={{
-            background: '#1a0d04',
+            background: 'linear-gradient(180deg, #160b04, #0f0703)',
             padding: '48px',
             position: 'relative',
             overflow: 'hidden',
+            boxShadow: '0 30px 80px rgba(0,0,0,0.18)',
           }}>
             {/* Decorative corner */}
             <div style={{ position: 'absolute', top: 0, right: 0, width: '80px', height: '80px', borderLeft: '1px solid #D4A855', borderBottom: '1px solid #D4A855', opacity: 0.3 }} />
@@ -215,7 +210,7 @@ export default function Contact() {
             {!submitted ? (
               <>
                 <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#D4A855', marginBottom: '16px' }}>
-                  सन्देश पठाउनुहोस्
+                  Contact
                 </p>
                 <h2 style={{ fontSize: '32px', fontWeight: 700, color: '#fdf6ee', margin: '0 0 8px', lineHeight: 1.1 }}>
                   Send Us a Message
@@ -228,7 +223,7 @@ export default function Contact() {
                   {/* Name */}
                   <div style={{ marginBottom: '24px' }}>
                     <label style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#8B6848', display: 'block', marginBottom: '8px' }}>
-                      Your Name · तपाईंको नाम *
+                      Your Name *
                     </label>
                     <input
                       type="text" name="name" required
@@ -247,7 +242,7 @@ export default function Contact() {
                   {/* Email */}
                   <div style={{ marginBottom: '24px' }}>
                     <label style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#8B6848', display: 'block', marginBottom: '8px' }}>
-                      Email · इमेल *
+                      Email *
                     </label>
                     <input
                       type="email" name="email" required
@@ -266,7 +261,7 @@ export default function Contact() {
                   {/* Phone */}
                   <div style={{ marginBottom: '24px' }}>
                     <label style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#8B6848', display: 'block', marginBottom: '8px' }}>
-                      Phone / WhatsApp · फोन *
+                      Phone / WhatsApp *
                     </label>
                     <input
                       type="tel" name="phone" required
@@ -285,7 +280,7 @@ export default function Contact() {
                   {/* Occasion */}
                   <div style={{ marginBottom: '24px' }}>
                     <label style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#8B6848', display: 'block', marginBottom: '8px' }}>
-                      Occasion · अवसर
+                      Occasion
                     </label>
                     <select
                       name="occasion"
@@ -312,7 +307,7 @@ export default function Contact() {
                   {/* Message */}
                   <div style={{ marginBottom: '32px' }}>
                     <label style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#8B6848', display: 'block', marginBottom: '8px' }}>
-                      Message · सन्देश
+                      Message
                     </label>
                     <textarea
                       name="message" rows={4}
@@ -384,9 +379,7 @@ export default function Contact() {
                 <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '14px', color: '#c4a882', lineHeight: 1.8, margin: '0 0 32px' }}>
                   Thank you, {formData.name}! We'll reply to {formData.email} and reach out to you on {formData.phone} within 24 hours.
                 </p>
-                <p style={{ fontSize: '20px', fontStyle: 'italic', color: '#D4A855' }}>
-                  धन्यवाद 🙏
-                </p>
+                <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#D4A855', margin: 0 }}>Thank you.</p>
               </div>
             )}
           </div>
@@ -408,7 +401,7 @@ export default function Contact() {
         }}>
           <div style={{ position: 'absolute', inset: 0, opacity: 0.03, backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238B4513'%3E%3Cpath d='M0 0h1v40H0zm40 0h1v40h-1zM0 0v1h40V0zm0 40v1h40v-1z'/%3E%3C/g%3E%3C/svg%3E")` }} />
           <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', marginBottom: '12px' }}>
-            हाम्रो स्थान · Our Location
+            Our Location
           </p>
           <h3 style={{ fontSize: '28px', fontWeight: 700, color: '#1a0d04', margin: '0 0 8px' }}>Nanda Emporium</h3>
           <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '14px', color: '#7A5C3D', margin: '0 0 24px' }}>
@@ -431,17 +424,17 @@ export default function Contact() {
       </section>
 
       {/* ── FAQ STRIP ── */}
-      <section style={{ background: '#1a0d04', padding: '80px 40px' }}>
+      <section style={{ background: 'linear-gradient(180deg, #160b04, #0f0703)', padding: '80px 40px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#D4A855', marginBottom: '16px' }}>
-              सामान्य प्रश्नहरू
+              FAQ
             </p>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: '#fdf6ee', margin: 0 }}>
               Frequently Asked Questions
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2px' }}>
             {[
               { q: 'Do you have budget and premium options?', a: 'Yes — we cater to all budgets, from affordable everyday wear to premium wedding outfits.' },
               { q: 'Do you have complete wedding collections?', a: 'Absolutely. We have full wedding looks for bride, groom, and family members.' },

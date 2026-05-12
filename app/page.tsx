@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", background: '#fdf6ee' }}>
+    <main style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", background: '#fbf5ec' }}>
 
       {/* ── HERO ── */}
       <section style={{
         minHeight: '92vh',
-        background: '#1a0d04',
+        background: 'radial-gradient(1200px 600px at 50% 30%, rgba(212,168,85,0.18), transparent 60%), linear-gradient(180deg, #160b04, #0f0703)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -33,7 +33,7 @@ export default function Home() {
             color: '#D4A855',
             marginBottom: '32px',
           }}>
-            Pokhara, Nepal · Est. 2013 · नन्दा एम्पोरियम
+            Pokhara, Nepal · Est. 2013 · Nanda Emporium
           </p>
 
           {/* Main headline */}
@@ -80,6 +80,7 @@ export default function Home() {
               padding: '16px 36px',
               textDecoration: 'none',
               fontWeight: 600,
+              boxShadow: '0 16px 40px rgba(0,0,0,0.25)',
             }}>
               Explore Collections
             </Link>
@@ -92,6 +93,7 @@ export default function Home() {
               border: '1px solid #D4A855',
               padding: '16px 36px',
               textDecoration: 'none',
+              background: 'rgba(212,168,85,0.06)',
             }}>
               Visit Our Store
             </Link>
@@ -147,15 +149,13 @@ export default function Home() {
       {/* ── COLLECTIONS GRID ── */}
       <section style={{ padding: '0 40px 100px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-          <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>
-            हाम्रो संग्रह
-          </p>
+          <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>Collections</p>
           <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: '#1a0d04', margin: 0 }}>
             Our Collections
           </h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2px' }}>
           {/* Large left card */}
           <Link href="/collection" style={{ textDecoration: 'none', gridRow: 'span 2' }}>
             <div style={{
@@ -171,7 +171,7 @@ export default function Home() {
             }}>
               <div style={{ position: 'absolute', top: '40px', right: '40px', width: '80px', height: '80px', border: '1px solid #D4A855', borderRadius: '50%', opacity: 0.3 }} />
               <div style={{ position: 'absolute', top: '55px', right: '55px', width: '50px', height: '50px', border: '1px solid #D4A855', borderRadius: '50%', opacity: 0.4 }} />
-              <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 12px' }}>महिला संग्रह</p>
+              <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 12px' }}>Category</p>
               <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '36px', fontWeight: 700, color: '#fdf6ee', margin: '0 0 12px', lineHeight: 1.1 }}>Women's Collection</h3>
               <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: '#c4a882', margin: '0 0 24px', lineHeight: 1.7 }}>Sarees, Lehengas, Wedding Wear, Shawls, Pashmina & ethnic outfits</p>
               <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.2em', color: '#D4A855', textTransform: 'uppercase' }}>View Collection →</span>
@@ -188,7 +188,7 @@ export default function Home() {
               justifyContent: 'flex-end',
               padding: '32px',
             }}>
-              <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 8px' }}>पुरुष संग्रह</p>
+              <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 8px' }}>Category</p>
               <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', fontWeight: 700, color: '#fdf6ee', margin: '0 0 8px' }}>Men's Collection</h3>
               <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '12px', color: '#c4a882', margin: '0 0 16px' }}>Suits, Kurta, Sherwani, Waistcoats & formal wear</p>
               <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.2em', color: '#D4A855', textTransform: 'uppercase' }}>View →</span>
@@ -206,7 +206,7 @@ export default function Home() {
                 justifyContent: 'flex-end',
                 padding: '24px',
               }}>
-                <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.2em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 6px' }}>बालबालिका</p>
+                <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.2em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 6px' }}>Category</p>
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '22px', fontWeight: 700, color: '#fdf6ee', margin: '0 0 16px' }}>Kids</h3>
                 <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.15em', color: '#D4A855', textTransform: 'uppercase' }}>View →</span>
               </div>
@@ -220,7 +220,7 @@ export default function Home() {
                 justifyContent: 'flex-end',
                 padding: '24px',
               }}>
-                <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.2em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 6px' }}>विवाह</p>
+                <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '9px', letterSpacing: '0.2em', color: '#D4A855', textTransform: 'uppercase', margin: '0 0 6px' }}>Category</p>
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '22px', fontWeight: 700, color: '#fdf6ee', margin: '0 0 16px' }}>Wedding</h3>
                 <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.15em', color: '#D4A855', textTransform: 'uppercase' }}>View →</span>
               </div>
@@ -233,17 +233,17 @@ export default function Home() {
       <section style={{ background: '#f5e6d0', padding: '100px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-            <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>किन नन्दा एम्पोरियम</p>
+            <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>Why us</p>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: '#1a0d04', margin: 0 }}>Why Nanda Emporium</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
             {[
-              { title: 'Budget to Premium', np: 'बजेट देखि प्रिमियम', desc: 'Wide price range for every customer — quality clothing at every budget.' },
-              { title: 'All Ages & Occasions', np: 'सबै उमेर र अवसर', desc: 'From newborns to adults, everyday wear to grand wedding attire.' },
-              { title: 'Wedding Specialists', np: 'विवाह विशेषज्ञ', desc: 'Complete wedding collections for bride, groom, and the entire family.' },
-              { title: 'Styling Support', np: 'स्टाइलिङ सहयोग', desc: 'Our team helps you choose the right outfit for any occasion or budget.' },
-              { title: 'Trusted in Pokhara', np: 'पोखरामा विश्वसनीय', desc: 'Over a decade of trusted service to families across Gandaki Province.' },
-              { title: 'One-Stop Shop', np: 'एकै ठाउँमा सबै', desc: 'Clothing, accessories, and essentials — everything under one roof.' },
+              { title: 'Budget to Premium', desc: 'Wide price range for every customer — quality clothing at every budget.' },
+              { title: 'All Ages & Occasions', desc: 'From newborns to adults, everyday wear to grand wedding attire.' },
+              { title: 'Wedding Specialists', desc: 'Complete wedding collections for bride, groom, and the entire family.' },
+              { title: 'Styling Support', desc: 'Our team helps you choose the right outfit for any occasion or budget.' },
+              { title: 'Trusted in Pokhara', desc: 'Over a decade of trusted service to families across Gandaki Province.' },
+              { title: 'One-Stop Shop', desc: 'Clothing, accessories, and essentials — everything under one roof.' },
             ].map((item) => (
               <div key={item.title} style={{
                 background: '#fdf6ee',
@@ -252,7 +252,6 @@ export default function Home() {
               }}>
                 <div style={{ width: '32px', height: '2px', background: '#D4A855', marginBottom: '20px' }} />
                 <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#1a0d04', margin: '0 0 6px' }}>{item.title}</h3>
-                <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.15em', color: '#8B4513', textTransform: 'uppercase', margin: '0 0 14px' }}>{item.np}</p>
                 <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: '#7A5C3D', margin: 0, lineHeight: 1.8 }}>{item.desc}</p>
               </div>
             ))}
@@ -262,7 +261,7 @@ export default function Home() {
 
       {/* ── WEDDING CTA ── */}
       <section style={{
-        background: '#1a0d04',
+        background: 'radial-gradient(900px 500px at 50% 30%, rgba(212,168,85,0.16), transparent 60%), linear-gradient(180deg, #160b04, #0f0703)',
         padding: '100px 40px',
         textAlign: 'center',
         position: 'relative',
@@ -277,7 +276,7 @@ export default function Home() {
         }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
           <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.4em', textTransform: 'uppercase', color: '#D4A855', marginBottom: '24px' }}>
-            विवाह संग्रह
+            Wedding collection
           </p>
           <h2 style={{ fontSize: 'clamp(32px, 6vw, 64px)', fontWeight: 700, color: '#fdf6ee', lineHeight: 1.1, margin: '0 0 24px' }}>
             Complete Wedding<br />
@@ -298,9 +297,7 @@ export default function Home() {
 
       {/* ── VISIT US ── */}
       <section style={{ padding: '100px 40px', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-        <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>
-          हामीलाई भेट्नुहोस्
-        </p>
+        <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>Visit us</p>
         <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: '#1a0d04', margin: '0 0 24px' }}>
           Come Visit Us in Pokhara
         </h2>
