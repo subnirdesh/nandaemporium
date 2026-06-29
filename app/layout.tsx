@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter,Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
@@ -15,6 +15,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: 'Nanda Emporium',
   description: 'Family owned clothing shop',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({

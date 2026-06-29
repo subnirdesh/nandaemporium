@@ -59,6 +59,7 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <motion.section
+        className="hero-section"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -183,6 +184,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div
+          className="hero-scroll-hint"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
@@ -209,7 +211,8 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
         variants={stagger}
-        style={{ padding: '100px 40px', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}
+        className="section-pad-x section-pad-y-lg"
+        style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}
       >
         <motion.p
           variants={fadeUp}
@@ -246,7 +249,8 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
         variants={stagger}
-        style={{ padding: '0 40px 100px', maxWidth: '1200px', margin: '0 auto' }}
+        className="section-pad-x collections-section"
+        style={{ paddingBottom: '100px', maxWidth: '1200px', margin: '0 auto' }}
       >
         <motion.div variants={fadeUp} style={{ textAlign: 'center', marginBottom: '56px' }}>
           <p style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8B4513', fontFamily: 'system-ui, sans-serif', marginBottom: '16px' }}>Collections</p>
@@ -255,10 +259,10 @@ export default function Home() {
           </h2>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2px' }}>
-          <motion.div variants={cardReveal} style={{ gridRow: 'span 2' }}>
+        <div className="collections-grid">
+          <motion.div variants={cardReveal} className="collections-featured">
             <Link href="/collection" style={{ textDecoration: 'none' }}>
-              <div style={{
+              <div className="collection-card-tall" style={{
                 background: 'linear-gradient(160deg, #2d1205, #5C2D0A)',
                 height: '100%',
                 minHeight: '500px',
@@ -289,7 +293,7 @@ export default function Home() {
 
           <motion.div variants={cardReveal}>
             <Link href="/collection" style={{ textDecoration: 'none' }}>
-              <div style={{
+              <div className="collection-card" style={{
                 background: 'linear-gradient(160deg, #3d1a0a, #6B3520)',
                 minHeight: '245px',
                 display: 'flex',
@@ -305,10 +309,10 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px' }}>
+          <div className="collections-nested">
             <motion.div variants={cardReveal}>
               <Link href="/collection" style={{ textDecoration: 'none' }}>
-                <div style={{
+                <div className="collection-card" style={{
                   background: 'linear-gradient(160deg, #1a0a05, #4a2010)',
                   minHeight: '245px',
                   display: 'flex',
@@ -324,7 +328,7 @@ export default function Home() {
             </motion.div>
             <motion.div variants={cardReveal}>
               <Link href="/collection" style={{ textDecoration: 'none' }}>
-                <div style={{
+                <div className="collection-card" style={{
                   background: 'linear-gradient(160deg, #2a1508, #8B4513)',
                   minHeight: '245px',
                   display: 'flex',
@@ -347,7 +351,8 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
-        style={{ background: '#f5e6d0', padding: '100px 40px' }}
+        className="section-pad-x section-pad-y-lg"
+        style={{ background: '#f5e6d0' }}
       >
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -361,7 +366,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}
+            className="why-us-grid"
           >
             {[
               { title: 'Budget to Premium', desc: 'Wide price range for every customer — quality clothing at every budget.' },
@@ -403,11 +408,11 @@ export default function Home() {
         variants={stagger}
         style={{
           background: 'radial-gradient(900px 500px at 50% 30%, rgba(212,168,85,0.16), transparent 60%), linear-gradient(180deg, #160b04, #0f0703)',
-          padding: '100px 40px',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
         }}
+        className="section-pad-x section-pad-y-lg"
       >
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.06, 0.1, 0.06] }}
@@ -458,7 +463,8 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
         variants={stagger}
-        style={{ padding: '100px 40px', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
+        className="section-pad-x section-pad-y-lg"
+        style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
       >
         <motion.p
           variants={fadeUp}

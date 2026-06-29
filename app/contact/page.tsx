@@ -36,7 +36,9 @@ export default function Contact() {
     <main style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", background: '#fbf5ec' }}>
 
       {/* ── HERO HEADER ── */}
-      <section style={{
+      <section
+        className="contact-hero"
+        style={{
         background: 'radial-gradient(1100px 540px at 50% 30%, rgba(212,168,85,0.18), transparent 60%), linear-gradient(180deg, #160b04, #0f0703)',
         padding: '100px 40px 80px',
         textAlign: 'center',
@@ -96,7 +98,7 @@ export default function Contact() {
       <div style={{ height: '3px', background: 'linear-gradient(90deg, #8B4513, #D4A855, #8B4513)' }} />
 
       {/* ── MAIN CONTENT ── */}
-      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 40px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '56px', alignItems: 'start' }}>
+      <section className="contact-main-grid section-pad-x section-pad-y-md" style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* LEFT — Info */}
         <div>
@@ -196,9 +198,8 @@ export default function Contact() {
 
         {/* RIGHT — Form */}
         <div>
-          <div style={{
+          <div className="contact-form-box" style={{
             background: 'linear-gradient(180deg, #160b04, #0f0703)',
-            padding: '48px',
             position: 'relative',
             overflow: 'hidden',
             boxShadow: '0 30px 80px rgba(0,0,0,0.18)',
@@ -387,7 +388,7 @@ export default function Contact() {
       </section>
 
       {/* ── MAP PLACEHOLDER ── */}
-      <section style={{ padding: '0 40px 80px', maxWidth: '1200px', margin: '0 auto' }}>
+      <section className="contact-map-section section-pad-x" style={{ paddingBottom: '80px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{
           background: '#f0dfc8',
           border: '1px solid #e8d5b8',
@@ -424,7 +425,7 @@ export default function Contact() {
       </section>
 
       {/* ── FAQ STRIP ── */}
-      <section style={{ background: 'linear-gradient(180deg, #160b04, #0f0703)', padding: '80px 40px' }}>
+      <section className="contact-faq-section section-pad-x section-pad-y-md" style={{ background: 'linear-gradient(180deg, #160b04, #0f0703)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#D4A855', marginBottom: '16px' }}>
@@ -434,7 +435,7 @@ export default function Contact() {
               Frequently Asked Questions
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2px' }}>
+          <div className="faq-grid">
             {[
               { q: 'Do you have budget and premium options?', a: 'Yes — we cater to all budgets, from affordable everyday wear to premium wedding outfits.' },
               { q: 'Do you have complete wedding collections?', a: 'Absolutely. We have full wedding looks for bride, groom, and family members.' },

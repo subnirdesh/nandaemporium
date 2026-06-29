@@ -8,14 +8,14 @@ export default function Footer() {
       <div style={{ height: '3px', background: 'linear-gradient(90deg, #8B4513, #D4A855, #8B4513)' }} />
 
       {/* Main footer content */}
-      <div style={{
-        maxWidth: '1100px',
-        margin: '0 auto',
-        padding: '64px 40px 40px',
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr 1fr',
-        gap: '48px',
-      }}>
+      <div
+        className="footer-grid section-pad-x"
+        style={{
+          maxWidth: '1100px',
+          margin: '0 auto',
+          padding: '64px 40px 40px',
+        }}
+      >
 
         {/* Column 1 — Brand */}
         <div>
@@ -143,15 +143,15 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{
-        borderTop: '1px solid #2a1508',
-        padding: '20px 40px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        maxWidth: '1100px',
-        margin: '0 auto',
-      }}>
+      <div
+        className="footer-bottom section-pad-x"
+        style={{
+          borderTop: '1px solid #2a1508',
+          padding: '20px 40px',
+          maxWidth: '1100px',
+          margin: '0 auto',
+        }}
+      >
         <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '11px', color: '#5C3D25', margin: 0 }}>
           © {new Date().getFullYear()} Nanda Emporium. All rights reserved.
         </p>
